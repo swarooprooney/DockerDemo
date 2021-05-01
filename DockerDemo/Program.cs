@@ -7,7 +7,7 @@ namespace DockerDemo
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            var mongoWrapper = new MongoWrapper("mongodb://admin:password@localhost:27017");
+            var mongoWrapper = new MongoWrapper("mongodb://admin:password@192.168.29.101:27017");
             var result = mongoWrapper.GetData("my-db", "users");
 
             foreach (var customer in result)
