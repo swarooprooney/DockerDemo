@@ -24,4 +24,4 @@ Step 6: Start your dotnet core application by pressing the play button on visual
 
 Step 7: Build docker image of the applicaiton, go to the path where dockerfile is stored and run the following command - docker build -t consoleapp .
 
-Step 8: Run the docker image - docker run -d consoleappr --net mongo-network 
+Step 8: Run the docker image - docker run -d consoleapp --net mongo-network 
