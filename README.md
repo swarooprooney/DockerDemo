@@ -21,3 +21,7 @@ http://localhost:8081
 Step 5: create user-account db and users collection in mongo-express
 
 Step 6: Start your dotnet core application by pressing the play button on visual studio
+
+Step 7: Build docker image of the applicaiton, go to the path where dockerfile is stored and run the following command - docker build -t consoleapp .
+
+Step 8: Run the docker image - docker run -d consoleappr --net mongo-network 
