@@ -22,5 +22,12 @@ namespace DockerDemo
             var coll = db.GetCollection<Users>(collection);
             return coll.Find(_=>true).ToList();
         }
+
+        public void InsertData<T>(string database, string collection,T data)
+        {
+            var client = new MongoClient(this.connectionString);
+            var db = client.GetDatabase(database);
+            db.GetCollection<T>(collection).InsertOne(data);
+        }
     }
 }
