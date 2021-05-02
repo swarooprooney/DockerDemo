@@ -25,3 +25,18 @@ Step 6: Start your dotnet core application by pressing the play button on visual
 Step 7: Build docker image of the applicaiton, go to the path where dockerfile is stored and run the following command - docker build -t consoleapp .
 
 Step 8: Run the docker image - docker run -d consoleapp --net mongo-network 
+
+How to push your image to Azure Container Registry.
+
+1. create a Container Registry on Azure
+2. Login to it using docker login
+3. Build your image on local using docker build -t [Image Name] .
+4. tag your image to the newly created COntainer Registry docker tag hello-world swaroopdocker.azurecr.io/hello-world
+5. Push your image to Container Registry docker push swaroopdocker.azurecr.io/hello-world
+
+Create this app in single step.
+
+1.go to the directory where docker-compose.yaml file is stored
+2.Run the following command docker-compose -f docker-compose.yaml up
+3.Thats it you now how mongo, mongo express and dotnet console app running on your machine.
+
